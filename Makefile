@@ -23,7 +23,7 @@ new-address:
 	./scripts/new_address.sh ${WALLET_NAME}
 
 query-utxo:
-	./scripts/quey_utxo.sh ${SENDER_ADDR}
+	./scripts/query_utxo.sh ${SENDER_ADDR}
 
 
 transaction-build:
