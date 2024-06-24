@@ -18,6 +18,10 @@ extract-variables:
 query-tip:
 	cardano-cli query tip --testnet-magic 1
 
+
+new-address:
+	./scripts/new_address.sh ${WALLET_NAME}
+
 query-utxo:
 	./scripts/quey_utxo.sh ${SENDER_ADDR}
 
