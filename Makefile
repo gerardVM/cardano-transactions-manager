@@ -4,8 +4,8 @@ SENDER_KEY       = ./wallets/${WALLET_NAME}/payment.skey
 SENDER_ADDR      = ./wallets/${WALLET_NAME}/payment.addr
 
 PROJECT          = ""
-TRANSACTION_FILE = ./transactions/${PROJECT}/outputs/simple-tx.draft
-SIGNED_FILE	     = ./transactions/${PROJECT}/outputs/simple-tx.signed
+TRANSACTION_FILE = ./transactions/${PROJECT}/outputs/simple_tx.draft
+SIGNED_FILE	     = ./transactions/${PROJECT}/outputs/simple_tx.signed
 
 
 -include Makefile.local
