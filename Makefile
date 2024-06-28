@@ -5,8 +5,9 @@ SENDER_KEY       = ./wallets/${WALLET_NAME}/payment.skey
 SENDER_ADDR      = ./wallets/${WALLET_NAME}/payment.addr
 
 PROJECT          = ""
-TRANSACTION_FILE = ./transactions/${PROJECT}/outputs/simple_tx.draft
-SIGNED_FILE	     = ./transactions/${PROJECT}/outputs/simple_tx.signed
+OUTPUTS_DIR      = ./transactions/${PROJECT}/outputs
+TRANSACTION_FILE = ${OUTPUTS_DIR}/simple_tx.draft
+SIGNED_FILE	     = ${OUTPUTS_DIR}/simple_tx.signed
 
 
 -include Makefile.local
@@ -28,6 +29,7 @@ query-utxo:
 
 
 transaction-build:
+	mkdir -p ${OUTPUTS_DIR}
 	./transactions/${PROJECT}/transaction-build.sh ${ENV_FILE} ${TRANSACTION_FILE}
 
 transaction-sign:
