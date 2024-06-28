@@ -9,6 +9,6 @@ cardano-cli transaction build \
     --testnet-magic 1 \
     --tx-in $tx_in \
     --tx-in $tx_in_tokens \
-    --tx-out $receiver+\"$lovelace_amount + $asset_amount $asset_id\" \
+    --tx-out $receiver+"$lovelace_amount + $asset_amount $asset_id" \
     --change-address $sender \
-    --out-file $1
+    --out-file $2

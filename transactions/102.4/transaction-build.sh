@@ -20,4 +20,4 @@ cardano-cli transaction build \
 --tx-out $faucet_addr+"2000000 + $number_tokens_output $faucet_token_unit" \
 --tx-out-inline-datum-file $datum_file \
 --change-address $sender \
---out-file $1
+--out-file $2
