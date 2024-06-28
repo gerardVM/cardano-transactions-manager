@@ -1,4 +1,8 @@
-source "$(dirname "$0")/variables.env"
+#!/bin/bash
+
+set -e
+
+source $1
 
 cardano-cli transaction build \
 --babbage-era \

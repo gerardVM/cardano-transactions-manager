@@ -1,4 +1,8 @@
-source "$(dirname "$0")/variables.env"
+#!/bin/bash
+
+set -e
+
+source $1
 
 cardano-cli transaction build \
 --babbage-era \
@@ -6,4 +10,4 @@ cardano-cli transaction build \
 --tx-in $tx_in \
 --tx-out $receiver+$lovelace_amount \
 --change-address $sender \
---out-file $transaction-file
+--out-file $2

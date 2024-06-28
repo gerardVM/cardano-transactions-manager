@@ -1,3 +1,4 @@
+ENV_FILE         = ./transactions/${PROJECT}/${PROJECT}.env
 
 WALLET_NAME      = ""
 SENDER_KEY       = ./wallets/${WALLET_NAME}/payment.skey
@@ -12,7 +13,7 @@ SIGNED_FILE	     = ./transactions/${PROJECT}/outputs/simple_tx.signed
 
 
 extract-variables:
-	./scripts/extract_variables.sh ./transactions/${PROJECT}/build-transaction.sh ./transactions/${PROJECT}/variables.env
+	./scripts/extract_variables.sh ./transactions/${PROJECT}/transaction-build.sh ${ENV_FILE}
 
 
 query-tip:
@@ -27,7 +28,7 @@ query-utxo:
 
 
 transaction-build:
-	./transactions/${PROJECT}/build-transaction.sh ${TRANSACTION_FILE}
+	./transactions/${PROJECT}/transaction-build.sh ${ENV_FILE} ${TRANSACTION_FILE}
 
 transaction-sign:
 	cardano-cli transaction sign \
