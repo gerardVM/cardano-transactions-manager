@@ -8,7 +8,7 @@ SENDER_ADDR      = ./wallets/${WALLET_NAME}/payment.addr
 PROJECT          = ""
 OUTPUTS_DIR      = ./transactions/${PROJECT}/outputs
 TRANSACTION_FILE = ${OUTPUTS_DIR}/simple_tx.draft
-SIGNED_FILE	     = ${OUTPUTS_DIR}/simple_tx.signed
+SIGNED_FILE      = ${OUTPUTS_DIR}/simple_tx.signed
 
 
 -include Makefile.local
