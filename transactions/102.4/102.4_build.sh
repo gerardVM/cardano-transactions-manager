@@ -8,6 +8,7 @@ cardano-cli transaction build \
     --babbage-era \
     --testnet-magic 1 \
     --tx-in $tx_in_fees \
+    --tx-in $tx_in_ppbl2024 \
     --tx-in-collateral $tx_in_fees \
     --tx-in $faucet_validator_tx_in \
     --spending-tx-in-reference $ref_utxo \
@@ -20,6 +21,3 @@ cardano-cli transaction build \
     --tx-out-inline-datum-file $datum_file \
     --change-address $sender \
     --out-file $2
-
-    
-#    --tx-in $tx_in_ppbl2024 \
