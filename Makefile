@@ -3,7 +3,7 @@ BUILD_FILE       = ./transactions/${TX}/${TX}_build.sh
 
 WALLET_NAME      = ""
 SENDER_KEY       = ./wallets/${WALLET_NAME}/payment.skey
-SENDER_ADDR      = ./wallets/${WALLET_NAME}/payment.addr
+ADDRESS          = $(shell cat ./wallets/${WALLET_NAME}/payment.addr)
 
 TX               = ""
 OUTPUTS_DIR      = ./transactions/${TX}/outputs
@@ -21,12 +21,11 @@ extract:
 query-tip:
 	@cardano-cli query tip --testnet-magic 1
 
-
 address:
 	@./scripts/new_address.sh ${WALLET_NAME}
 
 query:
-	@./scripts/query_utxo.sh ${SENDER_ADDR}
+	@cardano-cli query utxo --testnet-magic 1 --address ${ADDRESS}
 
 
 build:
