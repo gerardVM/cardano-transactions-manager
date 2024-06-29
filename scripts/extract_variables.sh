@@ -13,4 +13,4 @@ sort -u | \
 sed 's/\$//g' | \
 awk '{print $1"="}' > "$output_env"
 
-echo "Empty variables.env file created with variables from $input_script, excluding variables like \$1, \$2, etc."
+echo "Empty variables.env file created with variables from $input_script"
